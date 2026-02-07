@@ -1,0 +1,20 @@
+
+# --- AI & Environment Secrets ---
+.env
+.openai_api_key
+.python-version
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- GIS Specific ---
+# Ignore temporary spatial indexes and lock files
+*.lock
+*.laccdb
+*.idm
+*.ind
+*.dat
+*.atx
+*.aprx.lock
+
+# ---

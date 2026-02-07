@@ -1,0 +1,17 @@
+{
+  "type": "FeatureCollection",
+  "name": "Points in Web Mercator (EPSG:3857)",
+  "crs": { "type": "name", "properties": { "name": "EPSG:3857" } },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "id": 1, "name": "NYC Point", "type": "infrastructure" },
+      "geometry": { "type": "Point", "coordinates": [-13627665.27, 4548313.43] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": 2, "name": "LA Point", "type": "infrastructure" },
+      "geometry": { "type": "Point", "coordinates": [-13172385.41, 4037857.92] }
+    }
+  ]
+}

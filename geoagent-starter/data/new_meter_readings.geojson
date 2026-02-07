@@ -1,0 +1,12 @@
+{
+  "type": "FeatureCollection",
+  "name": "new_meter_installs_raw",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "asset_type": "Water Meter", "contractor": "Acme Spatial" },
+      "geometry": { "type": "Point", "coordinates": [-13627665.27, 4548313.43] }
+    }
+  ],
+  "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::4326" } }
+}

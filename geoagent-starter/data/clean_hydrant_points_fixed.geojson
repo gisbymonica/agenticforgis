@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "clean_hydrant_points_fixed",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3857" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 101, "status": "active", "last_inspected": "2025-11-01T00:00:00" }, "geometry": { "type": "Point", "coordinates": [ -13627665.271218072623014, 4547675.354340557940304 ] } },
+{ "type": "Feature", "properties": { "id": 102, "status": "maintenance", "last_inspected": "2024-05-12T00:00:00" }, "geometry": { "type": "Point", "coordinates": [ -13627787.722657948732376, 4547759.855839806608856 ] } }
+]
+}

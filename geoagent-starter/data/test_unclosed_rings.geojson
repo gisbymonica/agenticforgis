@@ -1,0 +1,23 @@
+{
+  "type": "FeatureCollection",
+  "name": "Unclosed Ring Polygons",
+  "crs": { "type": "name", "properties": { "name": "EPSG:4326" } },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "id": 1, "name": "Unclosed Polygon", "issue": "ring_not_closed" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[0, 0], [10, 0], [10, 10], [0, 10]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": 2, "name": "Proper Polygon", "issue": "none" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[20, 20], [30, 20], [30, 30], [20, 30], [20, 20]]]
+      }
+    }
+  ]
+}

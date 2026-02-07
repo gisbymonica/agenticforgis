@@ -1,0 +1,17 @@
+{
+  "type": "FeatureCollection",
+  "name": "Points in UTM Zone 10N (EPSG:26910)",
+  "crs": { "type": "name", "properties": { "name": "EPSG:26910" } },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "id": 1, "name": "SF Location", "type": "measurement_point" },
+      "geometry": { "type": "Point", "coordinates": [545696.79, 4183126.72] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": 2, "name": "Oakland Location", "type": "measurement_point" },
+      "geometry": { "type": "Point", "coordinates": [564830.42, 4172267.43] }
+    }
+  ]
+}

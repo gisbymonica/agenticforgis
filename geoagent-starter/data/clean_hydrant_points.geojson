@@ -1,0 +1,16 @@
+{
+  "type": "FeatureCollection",
+  "name": "fire_hydrants_clean",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "id": 101, "status": "active", "last_inspected": "2025-11-01" },
+      "geometry": { "type": "Point", "coordinates": [-122.4194, 37.7749] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": 102, "status": "maintenance", "last_inspected": "2024-05-12" },
+      "geometry": { "type": "Point", "coordinates": [-122.4205, 37.7755] }
+    }
+  ]
+}

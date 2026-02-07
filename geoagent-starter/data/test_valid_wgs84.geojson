@@ -1,0 +1,22 @@
+{
+  "type": "FeatureCollection",
+  "name": "Valid Points in WGS84",
+  "crs": { "type": "name", "properties": { "name": "EPSG:4326" } },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "id": 1, "name": "Point A", "type": "water_meter" },
+      "geometry": { "type": "Point", "coordinates": [-122.4194, 37.7749] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": 2, "name": "Point B", "type": "fire_hydrant" },
+      "geometry": { "type": "Point", "coordinates": [-122.4205, 37.7755] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": 3, "name": "Point C", "type": "water_meter" },
+      "geometry": { "type": "Point", "coordinates": [-122.4180, 37.7760] }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Self-Intersecting Polygon" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[0,0], [10,10], [0,10], [10,0], [0,0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Unclosed Ring" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[20,20], [30,20], [30,30], [25,35]]] 
+      }
+    }
+  ]
+}
