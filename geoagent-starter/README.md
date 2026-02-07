@@ -56,13 +56,13 @@ response = agent_executor.invoke({
 print(response["messages"][-1].content)
 ```
 
-### Option 2: Streamlit Web Interface (Coming Soon)
+### Option 2: Streamlit Web Interface (Built-in)
 
 ```bash
 streamlit run app.py
 ```
 
-Provides an interactive UI for uploading GeoJSON files and running repair/reprojection tasks.
+Provides the built-in Streamlit UI (`app.py`) for uploading GeoJSON files, running repair/reprojection tasks, and downloading results.
 
 ### Option 3: Direct Tool Usage
 
@@ -139,23 +139,22 @@ Sample GeoJSON files are provided in the `data/` directory:
 
 ```
 geoagent-starter/
+├── app.py                           # Streamlit web interface (built-in)
 ├── main.py                          # Entry point for agent executor
 ├── requirements.txt                 # Python dependencies
 ├── README.md                        # This file
 ├── agents/
-│   └── spatial_navigator.py        # Agent configuration & LLM setup
+│   └── spatial_navigator.py         # Agent configuration & LLM setup
 ├── tools/
-│   └── gis_operations.py           # GIS tool definitions
-├── application/
-│   └── app.py                      # Streamlit web interface (future)
+│   └── gis_operations.py            # GIS tool definitions
 └── data/
-    ├── test_valid_wgs84.geojson
-    ├── test_web_mercator.geojson
-    ├── test_invalid_self_intersect.geojson
-    ├── test_unclosed_rings.geojson
-    ├── test_utm_zone.geojson
-    ├── clean_hydrant_points.geojson
-    └── new_meter_readings.geojson
+   ├── test_valid_wgs84.geojson
+   ├── test_web_mercator.geojson
+   ├── test_invalid_self_intersect.geojson
+   ├── test_unclosed_rings.geojson
+   ├── test_utm_zone.geojson
+   ├── clean_hydrant_points.geojson
+   └── new_meter_readings.geojson
 ```
 
 ## Configuration ⚙️
@@ -228,7 +227,7 @@ sudo apt-get install gdal-bin libgdal-dev libgeos-dev
 
 ## Future Enhancements 🎯
 
-- [ ] Web UI via Streamlit with file upload
+- [x] Web UI via Streamlit with file upload
 - [ ] Multi-layer batch processing
 - [ ] Support for additional geometry types (e.g., 3D)
 - [ ] GeoJSON validation & fix recommendations

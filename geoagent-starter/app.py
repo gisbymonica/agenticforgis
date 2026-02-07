@@ -13,7 +13,19 @@ m = leafmap.Map(center=[0, 0], zoom=2)
 # --- Sidebar: Configuration ---
 with st.sidebar:
     st.header("Settings")
-    api_key = st.text_input("API Key", type="password")
+    
+    # Try to read API key from environment variables or Streamlit secrets
+    try:
+        api_key = st.secrets.get("GOOGLE_API_KEY") or os.getenv("GOOGLE_API_KEY")
+        if api_key:
+            st.success("✅ API Key loaded from environment")
+        else:
+            api_key = st.text_input("API Key (optional - will use environment if available)", type="password")
+            if not api_key:
+                st.warning("⚠️ No API key found. Will use default configuration.")
+    except:
+        api_key = st.text_input("API Key", type="password")
+    
     uploaded_file = st.file_uploader("Upload Source GIS Data", type=['geojson', 'shp', 'zip'])
     if uploaded_file:
     # Save the file to the data/ directory for the agent to access
