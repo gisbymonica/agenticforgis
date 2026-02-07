@@ -157,6 +157,58 @@ geoagent-starter/
    └── new_meter_readings.geojson
 ```
 
+## Architecture Diagram 🏗️
+
+The diagram below shows the main components and the data flow between the Streamlit UI, the agent, the LLM, and the GIS toolset.
+
+```mermaid
+flowchart TB
+   subgraph UI[Streamlit UI - `app.py`]
+      A[User Input & Upload]
+      B[Map Viewer / Download]
+   end
+
+   subgraph Agent[Agent Layer - `agents/spatial_navigator.py`]
+      C[Agent Executor]
+      D[Prompt Template]
+   end
+
+   subgraph LLM[LLM]
+      E[Google Gemini / GPT]
+   end
+
+   subgraph Tools[GIS Tools - `tools/gis_operations.py`]
+      F[get_layer_metadata()]
+      G[repair()/reproject()/repair_and_join()]
+   end
+
+   subgraph Data[Data Store]
+      H[data/*.geojson]
+      I[output *_fixed.geojson]
+   end
+
+   A -->|task request| C
+   C -->|prompt| D
+   D -->|call| E
+   E -->|decides tool| C
+   C -->|invokes| F
+   C -->|invokes| G
+   F --> H
+   G --> H
+   G --> I
+   I --> B
+   C -.->|logs & status| B
+
+   style UI fill:#f3f4f6,stroke:#bbb
+   style Agent fill:#eef2ff,stroke:#8b5cf6
+   style LLM fill:#fff7ed,stroke:#fb923c
+   style Tools fill:#ecfccb,stroke:#65a30d
+   style Data fill:#fef3c7,stroke:#f59e0b
+```
+
+Legend: UI = user interaction; Agent = LangChain runtime that orchestrates tool calls; LLM = language model (Gemini/GPT); Tools = geoprocessing functions; Data = input/output GeoJSON files.
+
+
 ## Configuration ⚙️
 
 ### Environment Variables
