@@ -19,5 +19,4 @@ def run_geospatial_task(prompt_text: str):
 
 if __name__ == "__main__":
     # Test it with a real GIS scenario
-    reproject("./data/test_web_mercator.geojson", "EPSG:4326")
-    # run_geospatial_task("Check the CRS of ./data/new_meter_readings.geojson and re-project to 4326 if needed.")
+    run_geospatial_task("Check the CRS of ./data/new_meter_readings.geojson and re-project to 4326 if needed.")
