@@ -12,7 +12,7 @@ load_dotenv()
 
 # 1. Initialize the LLM
 # Model gpt-4o is excellent at following rigid spatial logic
-llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", api_key="AIzaSyBHqcNH8z6Ud9SSmjlTYLPIk0dw93xCFkk")
+llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", api_key=os.getenv("GEMINI_API_KEY"))
 #llm = ChatOpenAI(model="gpt-4o", temperature=0, api_key=os.getenv("OPENAI_API_KEY"))
 
 # 2. Define the Toolbelt
